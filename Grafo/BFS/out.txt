@@ -1,0 +1,5 @@
+key = 1 distance = 0
+key = 2 distance = 1
+key = 3 distance = 1
+key = 5 distance = 2
+key = 4 distance = 2
