@@ -1,3 +1,9 @@
+/*  
+  Data 04/11/2025
+  Traccia:
+  Implementare un grafo, popolarlo tramite il file traccia.txt e implementare la bfs.
+  Nella prima riga trovi num vertici e num archi, nelle altre nodo sorgente,nodo destinazione,peso arco.
+*/
 #include <iostream>
 #include <fstream>
 #include <queue>
@@ -42,6 +48,7 @@ class Node
     
     //Setter
     bool          addChild(Node<T>*& child);
+    bool          addChild(int key);
     void          setKey(int key) {this->key = key;}
     void          setDistance(int distance) {this->distance = distance;}
     void          setData(T data){this->data = data;}
@@ -74,13 +81,18 @@ class Graph
   vector<Node<T>*> V;
   vector<Edge<T>*> E;
   
+  int vertex;
+  int edges;
+  
   public:
     //Constructor
-    Graph(){}
+    Graph(){vertex = 0; edges = 0;}
     
     bool     addVertex(int key);
     Node<T>* findVertex(int key);
     Node<T>* findVertexSecure(int key);
+    int      getEdges() {return edges;}
+    int      getVertex(){return vertex;}
     bool     addEdge(int key1,int key2,int w);
     void     population();
     void     bfs(int source);  
@@ -138,6 +150,7 @@ bool Graph<T>::addVertex(int key)
   //Aggiungi il vertice
   Node<T>* nodo = new Node<T>(key);
   V.push_back(nodo);
+  vertex++;
   return true;
 }
 
@@ -183,10 +196,11 @@ bool Graph<T>::addEdge(int key1,int key2,int w)
   Node<T>* x = findVertexSecure(key1);
   Node<T>* y = findVertexSecure(key2);
   
-  //Aggiunta al grafo
+  //Aggiunta al grafo 
   x->addChild(y);
   Edge<T>* edge = new Edge<T>(x,y,w);
   E.push_back(edge);
+  edges++;
   return true;
 }
 
@@ -207,20 +221,13 @@ void Graph<T>::population()
   
   for(int i = 0; i < edges; i++)
   {
-    if(vertex < 0)
-    {
-      cout<<"Numero di vertici errato"<<endl;
-      return;
-    }
-    
+    if(this->edges < edges) return;
+    if(this->vertex < vertex) return;
     if(in>>key1>>key2>>w)
     {
-        countedEdge++;
         cout<<"key1: "<<key1<<" key2 "<<key2<<endl;
         this->addEdge(key1,key2,w);
-    }else
-    {
-      if(countedEdge != edges-1) return;
+        continue;
     }
   }
 
