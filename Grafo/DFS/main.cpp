@@ -1,6 +1,6 @@
 /*
   Leggere dal file in.txt e scrivere nel file out.txt il risultato
-  Implementare la BFS e DFS
+  Implementare DFS
 */
 
 #include <iostream>

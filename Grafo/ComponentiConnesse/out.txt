@@ -1,0 +1,9 @@
+Ho trovato la componente connessa: 1
+key: 7
+Ho trovato la componente connessa: 2
+key: 5
+Ho trovato la componente connessa: 3
+key: 1
+key: 4
+key: 3
+key: 2
