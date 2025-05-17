@@ -1,0 +1,8 @@
+Kruskal
+L arcco 1 4 è stato preso
+L arcco 6 3 è stato preso
+L arcco 6 2 è stato preso
+L arcco 4 5 è stato preso
+L arcco 5 6 è stato preso
+L arcco 1 2 Non è stato preso
+L arcco 2 3 Non è stato preso
