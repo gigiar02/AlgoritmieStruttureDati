@@ -58,18 +58,18 @@ class Abr
       y = app;
       if(y->getKey() <= key)
       {
-        cout<<"Vado a destra"<<endl;
+        //cout<<"Vado a destra"<<endl;
         app = app->getRight();
       }else
       {
-        cout<<"Vado a sinistra"<<endl;
+        //cout<<"Vado a sinistra"<<endl;
         app = app->getLeft();
       }
     }
     
     if(!y)
     {
-      cout<<"Va nella radice"<<endl;
+      //cout<<"Va nella radice"<<endl;
       root = newNode;
       return newNode;
     }else if(y->getKey() > key)
@@ -105,7 +105,7 @@ class Abr
     T key; S value;
     while(in>>key>>value)
     {
-      cout<<"Procendo con "<<key<<" "<<value<<endl;
+      //cout<<"Procendo con "<<key<<" "<<value<<endl;
       insert(key,value);
     }
     
@@ -126,7 +126,7 @@ class Abr
       {
         S character = x->getValue();
         characterMap[character] = codifica;
-        cout<<"Codifica ottenuta per "<<x->getValue()<<" = "<<codifica<<endl;
+        //cout<<"Codifica ottenuta per "<<x->getValue()<<" = "<<codifica<<endl;
         return;
       }
       node* l = x->getLeft();
@@ -201,7 +201,7 @@ int main()
   a.print();
   string text = a.codifica("cicihic cicihi cicicihi");
   string dec = a.decodifica(text);
-  cout<<"dec = "<<dec<<endl;
+  //cout<<"dec = "<<dec<<endl;
   ofstream out("CodDec.txt");
   out<<"codifica di cicihic cicihi cicicihi = "<<text<<" decodifica = "<<dec<<endl;
   out.close();
