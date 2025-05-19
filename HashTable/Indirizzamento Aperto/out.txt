@@ -1,0 +1,10 @@
+0 c
+1 v
+2 n
+150 s
+170 h
+190 z
+200 m
+Ricerca della chiave 2: 
+Ricerca andata a buon fine 2n
+Eliminato con successo
