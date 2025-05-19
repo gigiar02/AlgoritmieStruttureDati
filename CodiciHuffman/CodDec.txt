@@ -1,0 +1,1 @@
+codifica di cicihic cicihi cicicihi = 0100101110001001011100100100101110 decodifica = cicihiccicihicicicih
