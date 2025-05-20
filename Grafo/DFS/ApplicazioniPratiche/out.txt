@@ -1,0 +1,6 @@
+Visita topologica
+key: 5 start: 9 end 10
+key: 1 start: 1 end 8
+key: 2 start: 2 end 7
+key: 3 start: 3 end 6
+key: 4 start: 4 end 5

@@ -58,6 +58,7 @@ class HashTable
     return false;
   }
   
+  
   Element<T,S>* findElement(T key)
   {
     T h = hashFunction(key);
@@ -78,6 +79,7 @@ class HashTable
     
   }
   
+  
   bool deleteElement(int key)
   {
     T h = hashFunction(key);
@@ -94,6 +96,7 @@ class HashTable
     }
     return false;
   }
+  
   
   void print()
   {
@@ -122,6 +125,7 @@ class HashTable
     }
   }
 };
+
 
 int main()
 {

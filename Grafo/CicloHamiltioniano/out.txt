@@ -1,0 +1,6 @@
+Verifica dell' esistenza di un ciclo Hamiltoniano
+Sono 5 Trovato 
+Sono 4 Trovato 
+Sono 3 Trovato 
+Sono 2 Trovato 
+Il grafo ha ciclo hamiltoniano
